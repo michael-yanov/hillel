@@ -1,10 +1,10 @@
 '''
-Square of integer numbers
+По данному целому числу N распечатайте все квадраты натуральных чисел, не превосходящие N, в порядке возрастания.
 '''
 
 n = int(input('Enter the number: '))
 i = 1
+print(n, end='\t\t')
 while (i ** 2) <= n:
-    #print(i ** 2)
-    print('{0} {1}'.format(n, i ** 2), end = ' ')
+    print(i ** 2, end='\t')
     i += 1
