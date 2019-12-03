@@ -3,8 +3,8 @@
 '''
 
 n = int(input('Enter the number: '))
-i = 1
 print(n, end='\t\t')
-while (2 ** i) < n:
-    print(2 ** i, end='\t')
-    i +=1
+i = 1
+while 2 ** i <= n:
+    i += 1
+print(i - 1, 2 ** (i-1), '\t', '2 **', i - 1, '=', 2 ** (i-1))
