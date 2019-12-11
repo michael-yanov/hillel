@@ -22,20 +22,23 @@
 #                 print('  ', end='')
 #         print()
 
-a = 10
+a = 7
 for i in range(a):
+    print(i, end='\t')
     for j in range((a - i)-1):
         print(end=" ")
     for j in range(i + 1):
         print("* ", end="")
+
     print()
 
 print('/' * 50)
 
 for i in range(a):
+    print(i, end='\t')
     for j in range((a - i)-1):
         print(end=" ")
     for j in range(i + 1):
-        if i == a - 1 or j == a // 2 + a:
+        if i == a - 1 or j == i:
             print("* ", end="")
     print()
