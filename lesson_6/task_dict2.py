@@ -11,8 +11,7 @@ for i in s:
     else:
         d[i] = 1
 max_word = max(d.values())
-# for key, value in sorted(d.items()):
-#     if value == max_word:
-#         print('The most used word is: ', key, '-', value, 'times')
-for key, value in sorted(d.items(), key=lambda para: para[1]):
-    print(key, value)
+for key, value in sorted(d.items()):
+    if value == max_word:
+        print('The most used word is: ', key, '-', value, 'times')
+
