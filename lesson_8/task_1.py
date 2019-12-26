@@ -23,7 +23,7 @@ orders = [
 # total_orders = list(map(lambda x, y: (x, y), orders_num, orders_price))
 # print(total_orders)
 
-total_orders = list(map(lambda x: (x[0], str(x[2]*x[3])), orders))
+total_orders = list(map(lambda x: (x[0], str('{0:.2f}'.format(x[2]*x[3] + 10)) if x[2]*x[3] < 100 else round(x[2]*x[3], 1)), orders))
 print(total_orders)
 
 
