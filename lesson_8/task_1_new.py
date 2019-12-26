@@ -5,5 +5,5 @@ orders = [
     [88112, 'Einfuhrung in Python3, Berbd Klein', 3, 24.99]
 ]
 
-total_orders = list(map(lambda x: (x[0], str('{0:.1f}'.format(x[2]*x[3] + 10)) if x[2]*x[3] < 100 else round(x[2]*x[3], 1)), orders))
+total_orders = list(map(lambda x: (x[0], str('{0:.2f}'.format(x[2]*x[3] + 10)) if x[2]*x[3] < 100 else round(x[2]*x[3], 2)), orders))
 print(total_orders)
