@@ -5,26 +5,24 @@ orders = [
     [88112, 'Einfuhrung in Python3, Berbd Klein', 3, 24.99]
 ]
 
-# orders_price = []
-# orders_num = []
-#
-# orders_num = [i[0] for i in orders if len(i)] # first element from each list
-#
-#
-# for i in range(len(orders)): # multiplication of price and quantity
-#     price = 0
-#     for j in range(len(orders)):
-#         price = round(orders[i][2] * orders[i][3], 2)
-#         if price < 100:
-#             price += 10
-#     orders_price.append(price)
-# orders_new = tuple(orders_price)
-#
-# total_orders = list(map(lambda x, y: (x, y), orders_num, orders_price))
-# print(total_orders)
+orders_price = []
+orders_num = []
 
-total_orders = list(map(lambda x: (x[0], str('{0:.2f}'.format(x[2]*x[3] + 10)) if x[2]*x[3] < 100 else round(x[2]*x[3], 1)), orders))
+orders_num = [i[0] for i in orders if len(i)] # first element from each list
+
+
+for i in range(len(orders)): # multiplication of price and quantity
+    price = 0
+    for j in range(len(orders)):
+        price = round(orders[i][2] * orders[i][3], 2)
+        if price < 100:
+            price += 10
+    orders_price.append(price)
+orders_new = tuple(orders_price)
+
+total_orders = list(map(lambda x, y: (x, y), orders_num, orders_price))
 print(total_orders)
+
 
 
 
