@@ -1,30 +1,11 @@
-# s = 'zozo'
-# for i in range(len(s)):
-#     print(i ^ 5, end='')
-# print()
-# print(s)
-#
-# print('*'*100)
+def XOR_cipher(string, key):
+    encrypt_string = []
+    for i in string:
+        encrypt_string.append(chr(ord(i) ^ key))
+    return ''.join(encrypt_string)
 
-
-def xor_crypt_string(data, key='awesomepassword', encode=False, decode=False):
-    from itertools import izip, cycle
-    import base64
-
-    if decode:
-        data = base64.decodestring(data)
-    xored = ''.join(chr(ord(x) ^ ord(y)) for (x, y) in izip(data, cycle(key)))
-
-    if encode:
-        return base64.encodestring(xored).strip()
-    return xored
-
-
-secret_data = "XOR procedure"
-
-print("The cipher text is")
-print
-xor_crypt_string(secret_data, encode=True)
-print("The plain text fetched")
-print
-xor_crypt_string(xor_crypt_string(secret_data, encode=True), decode=True)
+string = 'hello guys'
+key = 8
+print('encrypt string is: ', XOR_cipher(string, 8))
+encrypt_string = XOR_cipher(string, key)
+print('original string is: ', XOR_cipher(encrypt_string, key))
