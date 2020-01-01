@@ -10,8 +10,8 @@ def XOR_cipher(string, key):
         encrypt_string.append(chr(ord(i) ^ key))
     return ''.join(encrypt_string)
 
-string = 'hello'
-key = 5
+string = str(input('Enter the string: '))
+key = int(input('Enter the key: '))
 print('encrypt string is: ', XOR_cipher(string, key))
 encrypt_string = XOR_cipher(string, key)
 print('original string is: ', XOR_cipher(encrypt_string, key))
