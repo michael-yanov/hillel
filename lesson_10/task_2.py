@@ -13,7 +13,7 @@ def del_elm(lst, k):
 
 
 lst = [12, 5, 8, 15, 95]
-k = 3
+k = 1
 print(del_elm(lst, k))
 
 

@@ -5,5 +5,5 @@
 а возвращает символ соответствующий этому числу.
 '''
 
-myList = {i: chr(i) for i in range(32, 128)}
-print(myList)
+myDict = {i: chr(i) for i in range(32, 128)}
+print(myDict)
