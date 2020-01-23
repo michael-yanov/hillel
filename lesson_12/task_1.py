@@ -17,4 +17,4 @@ def isvalid(password):
         return False
 
 
-print(isvalid('pAsSwoRd189&*='))
+print(isvalid('pAsSwoRd189%^&'))

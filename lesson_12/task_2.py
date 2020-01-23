@@ -5,6 +5,7 @@
 
 
 def change_letters(string):
+    print('Origin is: ', string)
     string_new = []
     for i in range(len(string)):
         if string[i] == 'A':
@@ -14,5 +15,5 @@ def change_letters(string):
     return ''.join(string_new)
 
 
-print(change_letters('AABABBAABBBAB'))
+print('Modifaed is: ', change_letters('AABABBAABBBAB'))
 

@@ -9,4 +9,4 @@ def sum_elm(num):
     return sum(list)
 
 
-print(sum_elm(12345))
+print('Result is',sum_elm(12345))
